@@ -21,7 +21,7 @@ RUN bazel build :main --build_python_zip \
     && cp -L bazel-bin/main ./main
 
 FROM python:3.7.5-slim-buster
-LABEL version="0.0.1" maintainer="Vladislav I. Kulbatski" email="hi@exesse.org"
+LABEL maintainer="Vladislav I. Kulbatski" email="hi@exesse.org"
 
 COPY --from=builder /bazel/main /cuda/main
 
