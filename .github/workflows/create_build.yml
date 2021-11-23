@@ -16,8 +16,8 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            name/app
-            ghcr.io/username/app
+            # name/app
+            ghcr.io/exesse/sample-bazel
           tags: |
             type=schedule
             type=ref,event=branch
