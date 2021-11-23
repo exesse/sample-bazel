@@ -18,12 +18,12 @@ flags.DEFINE_boolean('gpu_enabled', False,
 
 def main(argv):
     del argv  # Unused.
+    print('Running under Python {0[0]}.{0[1]}.{0[2]}'.format(sys.version_info),
+          file=sys.stderr)
     if FLAGS.input_dir is None:
         print("No input directory provided. Please use --help for usage.")
         sys.exit(0)
 
-    print('Running under Python {0[0]}.{0[1]}.{0[2]}'.format(sys.version_info),
-          file=sys.stderr)
     logging.info('Input directory is %s.', FLAGS.input_dir)
     if FLAGS.output_dir is not None:
         logging.info('Output directory is %s.', FLAGS.input_dir)
